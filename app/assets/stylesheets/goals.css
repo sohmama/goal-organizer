@@ -11,13 +11,45 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set-goal a {
+  font-size: 20px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
 }
 
 .goals {
   background-color: #2F3E51;
   height: calc(100vh - 100px);
   padding: 0 20px;
+  overflow: scroll;
 }
+
+.goal {
+  padding: 20px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-title a {
+  text-decoration: none;
+  color: white;
+}
+
+.deadline a {
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
 .main-body {
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
