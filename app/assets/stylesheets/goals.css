@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set-goal a {
+  font-size: 20px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.goals {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.goal {
+  padding: 20px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-title a {
+  text-decoration: none;
+  color: white;
+}
+
+.deadline a {
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.main-body {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.main-header {
+  height: 100px;
+  padding: 0 40px;
+  text-align: right;
+  position: relative;
+}
+
+.user-nickname {
+  position: absolute;
+  right: 0;
+}
+
+.user-nickname a {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.logout a {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.main {
+  background-image: url(header_image.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+}
+
+.main-footer {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
