@@ -58,10 +58,40 @@
 .main-header {
   height: 100px;
   padding: 0 40px;
+  text-align: right;
+  position: relative;
+}
+
+.user-nickname {
+  position: absolute;
+  right: 0;
+}
+
+.user-nickname a {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.logout a {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px;
 }
 
 .main {
-  background-color: #FAFAFA;
+  background-image: url(header_image.jpg);
+  background-size: cover;
+  background-position: center;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
 }
@@ -70,4 +100,42 @@
   background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
