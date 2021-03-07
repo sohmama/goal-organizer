@@ -1,6 +1,6 @@
 <div class="main-header">
   <div class="user-nickname">
-    <a href="#">ユーザーニックネーム</a>
+    <%= link_to current_user.nickname, edit_user_path(current_user) %>
   </div>
   <div class="logout">
    <a href="#">ログアウト</a>
