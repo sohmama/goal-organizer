@@ -4,6 +4,7 @@ class Goal < ApplicationRecord
     validates :content
     validates :deadline
   end
-       
+  
   belongs_to :user
+
 end
