@@ -1,24 +1,18 @@
 <div class="side-bar-header">
   <div class="set-goal">
-    <a href="#">目標を設定する</a>
+    <%= link_to "目標を設定する",  new_goal_path, class: 'btn'%>
   </div>
 </div>
 
 <div class="goals">
-  <div class="goal">
-    <div class="goal-title">
-      <a href="#">TOEIC満点</a>
+  <% current_user.goals. each do |goal| %>
+    <div class="goal">
+      <div class="goal-title">
+        <a href="#"><%= goal.title %></a>
+      </div>
+      <div class="deadline">
+        <a href="#"><%= goal.deadline %></a>
+      </div>
     </div>
-    <div class="deadline">
-     <a href="#">2021年5月</a>
-    </div>
-  </div>
-  <div class="goal">
-    <div class="goal-title">
-      <a href="#">仏検3級</a>
-    </div>
-    <div class="deadline">
-     <a href="#">2021年9月</a>
-    </div>
-  </div>
+  <% end %>
 </div>
