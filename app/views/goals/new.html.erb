@@ -10,14 +10,22 @@
       </div>
     </div>
     <div class='goal-form__field'>
+      <div class='goal-form__field--left'>
+        <%= f.label :内容, class: 'goal-form__label'%>
+      </div>
+      <div class='goal-form__field--right'>
+        <%= f.text_field :name, class: 'goal-form__input', placeholder: '目標の内容を入力してください'%>
+      </div>
     </div>
     <div class='goal-form__field'>
       <div class='goal-form__field--left'>
-        <%= f.text_field :name, class: 'goal-form__input', placeholder: '期限を入力してください'%>
+        <%= f.label :期限, class: 'goal-form__label'%>
       </div>
       <div class='goal-form__field--right'>
+        <%= f.text_field :name, class: 'goal-form__input', placeholder: '目標の内容を入力してください'%>
       </div>
     </div>
+
     <div class='goal-form__field'>
       <div class='goal-form__field--left'></div>
       <div class='goal-form__field--right'>

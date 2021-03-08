@@ -4,6 +4,10 @@ class GoalsController < ApplicationController
   def index
   end
 
+  def new
+    @goal = Goal.new
+  end
+
   private
   # def move_to_index
   #   unless user_signed_in?
