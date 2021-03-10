@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
+  before_action :goal_find, except: [:index, :new, :create]
 
   def index
   end
@@ -18,20 +19,22 @@ class GoalsController < ApplicationController
   end
 
   def show
-    @goal = Goal.find(params[:id])
   end
 
   def edit
-    @goal = Goal.find(params[:id])
   end
 
   def update
-    @goal = Goal.find(params[:id])
     if @goal.update(goal_params)
       redirect_to goal_path
     else 
       render :edit
     end
+  end
+
+  def destroy
+    @goal.destroy
+    redirect_to root_path
   end
 
   private
@@ -43,5 +46,9 @@ class GoalsController < ApplicationController
 
   def goal_params
     params.require(:goal).permit(:image, :title, :content, :deadline).merge(user_id: current_user.id)
+  end
+
+  def goal_find
+    @goal = Goal.find(params[:id])
   end
 end

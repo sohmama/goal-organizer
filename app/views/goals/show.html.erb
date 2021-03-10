@@ -18,7 +18,7 @@
     <% if user_signed_in? && current_user.id == @goal.user_id %>
       <%= link_to '編集', edit_goal_path, method: :get, class: "goal-red-btn" %> 
       <p class='or-text'>or</p>
-      <%# <%= link_to '削除', goal_path, method: :delete, class:'goal-destroy' %>  %>
+      <%= link_to '削除', goal_path, method: :delete, class:"goal-red-btn" %> 
     <% end %>
 
   </div>
