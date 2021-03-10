@@ -21,6 +21,19 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
   end
 
+  def edit
+    @goal = Goal.find(params[:id])
+  end
+
+  def update
+    @goal = Goal.find(params[:id])
+    if @goal.update(goal_params)
+      redirect_to goal_path
+    else 
+      render :edit
+    end
+  end
+
   private
   def move_to_index
     unless user_signed_in?
