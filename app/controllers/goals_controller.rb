@@ -17,6 +17,10 @@ class GoalsController < ApplicationController
     end
   end
 
+  def show
+    @goal = Goal.find(params[:id])
+  end
+
   private
   def move_to_index
     unless user_signed_in?

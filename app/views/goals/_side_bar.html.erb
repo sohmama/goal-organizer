@@ -8,7 +8,7 @@
   <% current_user.goals. each do |goal| %>
     <div class="goal">
       <div class="goal-title">
-        <a href="#"><%= goal.title %></a>
+        <%= link_to goal.title, goal_path(goal.id), method: :get %>
       </div>
       <div class="deadline">
         <a href="#"><%= goal.deadline %></a>
