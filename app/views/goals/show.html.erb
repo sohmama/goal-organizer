@@ -1,29 +1,28 @@
-<main class="main">
-  <div class="inner">
-    <div class="goal__wrapper">
-      <p class="goal__hedding">
-        <%= "目標"%>
-      </p>
-      <%= link_to "by プロトタイプの投稿者", root_path, class: :prototype__user %>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-        <div class="prototype__manage">
-          <%= link_to "編集する", root_path, class: :prototype__btn %>
-          <%= link_to "削除する", root_path, class: :prototype__btn %>
-        </div>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-      <%# <div class="prototype__image">
-        <%= image_tag "プロトタイプの画像" %>
-      <%# </div> %> 
-      <div class="goal__body">
-        <div class="goal__detail">
-          <p class="goal__title">目標</p>
-            <%= @goal.title %>
-          <p class="goal__content">内容</p>
-            <%= @goal.content %>
-          <p class="goal__deadline">期日</p>
-            <%= @goal.deadline%>
-        </div>
+<div class="goal-show">
+  <div class="goal-box">
+    <div class="goal-img-content">
+      <%= image_tag @goal.image, class:"goal-box-img" %>
+    </div>
+    <div class="goal-detail">
+      <div class="goal-title">
+        <%= @goal.title %>
+      </div>
+      <div class="goal-content">
+        <%= @goal.content %>
+      </div>
+      <div class="deadline">
+        <%= @goal.deadline %>
       </div>
     </div>
+
+    <% if user_signed_in? && current_user.id == @goal.user_id %>
+      <%= link_to '編集', edit_goal_path, method: :get, class: "goal-red-btn" %> 
+      <p class='or-text'>or</p>
+      <%# <%= link_to '削除', goal_path, method: :delete, class:'goal-destroy' %>  %>
+    <% end %>
+
   </div>
-</main>
+</div>
+
+
+    
