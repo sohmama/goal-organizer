@@ -1,0 +1,46 @@
+<%= form_with model:@goal, local: true do |f| %>
+  <div class="goals-main">
+    <h2 class="goals-main-title">目標の情報を入力してください</h2>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+       モチベーションになる画像を載せましょう！
+      </div>
+      <div class="click-upload">
+        <p>
+         クリックしてファイルをアップロード
+        </p>
+         <%= f.file_field :image, id:"goal-image" %>
+      </div>
+    </div>
+    <div class="new-goals">
+      <div class="goals-title">
+        <div class="weight-bold-text">
+         目標
+        </div>
+        <%= f.text_area :title, class:"goals-text", id:"goal-title", placeholder:"目標（必須 40文字まで)", maxlength:"40" %>
+      <div class="goals-content">
+        <div class="weight-bold-text">
+         目標の内容
+        </div>
+        <%= f.text_area :content, class:"goals-text", id:"goal-content", placeholder:"目標の内容（具体的なアクションなど）", rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="goals-deadline">
+        <div class="weight-bold-text">
+         達成期日
+        </div>
+        <%= f.text_area :deadline, class:"goals-text", id:"goal-deadline", placeholder:"例）2021-05-31" %>
+      </div>
+    </div>
+    <% if action_name == 'new' %>
+      <div class="set-btn-contents">
+        <%= f.submit "目標を設定する" ,class:"set-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <% else %> 
+      <div class="set-btn-contents">
+        <%= f.submit "変更する" ,class:"set-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
