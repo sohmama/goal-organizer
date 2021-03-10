@@ -29,6 +29,6 @@ class GoalsController < ApplicationController
   end
 
   def goal_params
-    params.require(:goal).permit(:title, :content, :deadline).merge(user_id: current_user.id)
+    params.require(:goal).permit(:image, :title, :content, :deadline).merge(user_id: current_user.id)
   end
 end
