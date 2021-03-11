@@ -89,9 +89,10 @@
 }
 
 .main {
-  background-image: url(header_image.jpg);
+  /* background-image: url(header_image.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background-color: white;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
 }
