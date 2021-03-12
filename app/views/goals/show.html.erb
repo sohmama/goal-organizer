@@ -14,6 +14,9 @@
         <%= @goal.deadline %>
       </div>
     </div>
+    <div class="todo-lists">
+    <%= render partial: "todo" %>
+    </div>
 
     <% if user_signed_in? && current_user.id == @goal.user_id %>
       <%= link_to '編集', edit_goal_path, method: :get, class: "goal-red-btn" %> 
